@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.2.0",
   "name": "Tile Bloom",
   "tagline": "Triple Match Puzzle",
   "colors": {
@@ -19,45 +19,131 @@
     "chapters": [
       {
         "id": "ocean",
-        "range": [1, 30],
-        "bg": ["#0d4a6e", "#072c47", "#041420"],
+        "range": [
+          1,
+          30
+        ],
+        "bg": [
+          "#0d4a6e",
+          "#072c47",
+          "#041420"
+        ],
         "accent": "#59e2ff",
         "glass": "#8ae2ff",
         "ambient": "bubbles",
-        "iconPalette": ["#7ff3ff", "#ffd166", "#ff8fa3", "#9dffd0", "#c9a7ff", "#ffa94d", "#8ad7ff", "#ffe3a3", "#ff6f91", "#a0f0ff"]
+        "iconPalette": [
+          "#7ff3ff",
+          "#ffd166",
+          "#ff8fa3",
+          "#9dffd0",
+          "#c9a7ff",
+          "#ffa94d",
+          "#8ad7ff",
+          "#ffe3a3",
+          "#ff6f91",
+          "#a0f0ff"
+        ]
       },
       {
         "id": "bakery",
-        "range": [31, 60],
-        "bg": ["#6b4226", "#432a18", "#2a1a10"],
+        "range": [
+          31,
+          60
+        ],
+        "bg": [
+          "#6b4226",
+          "#432a18",
+          "#2a1a10"
+        ],
         "accent": "#ffb0c8",
         "glass": "#ffd9e3",
         "ambient": "crumbs",
-        "iconPalette": ["#ff9ecb", "#ffc46b", "#fff0a8", "#9fe8c8", "#d5b6ff", "#ff7a9e", "#e8b47a", "#fff6df", "#d99a6c", "#ff5f7e"]
+        "iconPalette": [
+          "#ff9ecb",
+          "#ffc46b",
+          "#fff0a8",
+          "#9fe8c8",
+          "#d5b6ff",
+          "#ff7a9e",
+          "#e8b47a",
+          "#fff6df",
+          "#d99a6c",
+          "#ff5f7e"
+        ]
       },
       {
         "id": "cosmos",
-        "range": [61, 90],
-        "bg": ["#2b1a5e", "#1a0e3d", "#0b0620"],
+        "range": [
+          61,
+          90
+        ],
+        "bg": [
+          "#2b1a5e",
+          "#1a0e3d",
+          "#0b0620"
+        ],
         "accent": "#b18cff",
         "glass": "#cdb0ff",
         "ambient": "stars",
-        "iconPalette": ["#b18cff", "#7ff3ff", "#ffd166", "#ff8fc7", "#9dffd0", "#ff9f68", "#c9d7ff", "#ff6f91", "#d4ff8f", "#a0c8ff"]
+        "iconPalette": [
+          "#b18cff",
+          "#7ff3ff",
+          "#ffd166",
+          "#ff8fc7",
+          "#9dffd0",
+          "#ff9f68",
+          "#c9d7ff",
+          "#ff6f91",
+          "#d4ff8f",
+          "#a0c8ff"
+        ]
       },
       {
         "id": "zen",
-        "range": [91, 120],
-        "bg": ["#2c5540", "#1b3a2a", "#0d1f16"],
+        "range": [
+          91,
+          120
+        ],
+        "bg": [
+          "#2c5540",
+          "#1b3a2a",
+          "#0d1f16"
+        ],
         "accent": "#8fe6a4",
         "glass": "#b8f3d4",
         "ambient": "petals",
-        "iconPalette": ["#8fe6a4", "#ffd6a0", "#f3b8ff", "#ffe98f", "#9fd8ff", "#c0e8d0", "#ffb3c0", "#d9c9a8", "#a8ffd0", "#ff8f8f"]
+        "iconPalette": [
+          "#8fe6a4",
+          "#ffd6a0",
+          "#f3b8ff",
+          "#ffe98f",
+          "#9fd8ff",
+          "#c0e8d0",
+          "#ffb3c0",
+          "#d9c9a8",
+          "#a8ffd0",
+          "#ff8f8f"
+        ]
       }
     ]
   },
   "typography": {
-    "display": { "family": "Baloo 2", "weights": [600, 700, 800] },
-    "body": { "family": "Nunito", "weights": [400, 700, 800] },
+    "display": {
+      "family": "Baloo 2",
+      "weights": [
+        600,
+        700,
+        800
+      ]
+    },
+    "body": {
+      "family": "Nunito",
+      "weights": [
+        400,
+        700,
+        800
+      ]
+    },
     "scale": {
       "logo": 52,
       "modalTitle": 25,
@@ -72,20 +158,45 @@
     "safeAreas": "env(safe-area-inset-*)",
     "hudHeight": 54,
     "boosterBarHeight": 78,
-    "tileCell": [30, 84],
+    "tileCell": [
+      30,
+      84
+    ],
     "tileFillRatio": 0.92,
     "tileRadiusRatio": 0.22,
     "traySlots": 7,
-    "radii": { "button": 18, "buttonBig": 22, "card": 30, "chip": 999 },
-    "spacing": [4, 8, 10, 14, 26]
+    "radii": {
+      "button": 18,
+      "buttonBig": 22,
+      "card": 30,
+      "chip": 999
+    },
+    "spacing": [
+      4,
+      8,
+      10,
+      14,
+      26
+    ]
   },
   "motion": {
     "flyMs": 300,
     "settleLerpPerSec": 14,
     "starStaggerMs": 260,
     "introBannerMs": 1050,
-    "failShake": { "duration": 0.55, "amplitude": 9 },
+    "failShake": {
+      "duration": 0.55,
+      "amplitude": 9
+    },
     "prefersReducedMotion": "honor"
   },
-  "screens": ["home", "tutorial", "gameplay", "pause", "level-complete", "fail", "settings"]
+  "screens": [
+    "home",
+    "tutorial",
+    "gameplay",
+    "pause",
+    "level-complete",
+    "fail",
+    "settings"
+  ]
 }
