@@ -86,5 +86,5 @@
   <!-- stats -->
   <text x="158" y="766" text-anchor="middle" font-size="15" font-weight="800" fill="rgba(234,247,255,0.62)">★ 0</text>
   <text x="232" y="766" text-anchor="middle" font-size="15" font-weight="800" fill="rgba(234,247,255,0.62)">⬤ 300</text>
-  <text x="195" y="800" text-anchor="middle" font-size="11" fill="rgba(234,247,255,0.35)" letter-spacing="2">V1.0.0</text>
+  <text x="195" y="800" text-anchor="middle" font-size="11" fill="rgba(234,247,255,0.35)" letter-spacing="2">V1.0.1</text>
 </svg>

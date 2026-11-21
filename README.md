@@ -1,6 +1,6 @@
 # Tile Bloom — Tasarım Deposu (Design)
 
-**Tile Bloom v1.0.0** görsel kimliğinin tek kaynağı. Google Stitch'e hazır.
+**Tile Bloom v1.0.1** görsel kimliğinin tek kaynağı. Google Stitch'e hazır.
 
 ## İçerik
 
@@ -21,7 +21,7 @@
 
 ## Versiyon Kuralı
 
-Bu depodaki versiyon (`DESIGN.md` altında) **1.0.0**. Oyun depolarıyla eşit tutulur;
+Bu depodaki versiyon (`DESIGN.md` altında) **1.0.1**. Oyun depolarıyla eşit tutulur;
 `tile-bloom-dev` içindeki `npm run version:check` kontrol eder.
 
 ## Yeniden Kullanım

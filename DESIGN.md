@@ -1,7 +1,7 @@
 # Tile Bloom — DESIGN.md
 
 > Single source of truth for the look & feel of **Tile Bloom**, a relaxing triple-tile
-> matching puzzle. Version **1.0.0**. This document follows the open DESIGN.md standard
+> matching puzzle. Version **1.0.1**. This document follows the open DESIGN.md standard
 > and is ready to paste into Google Stitch ("Start with your design" → *Paste existing
 > DESIGN.md*).
 
@@ -181,4 +181,4 @@ next level; Fail → Continue (rewarded, ≤2/level) / Retry / Home.
 
 No third-party imagery, fonts, or audio; everything is original and generated.
 
-© 2026 Elchin Jabbarli — Tile Bloom. Version 1.0.0.
+© 2026 Elchin Jabbarli — Tile Bloom. Version 1.0.1.
