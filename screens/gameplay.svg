@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" font-family="Nunito, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d4a6e"/>
+      <stop offset="0.55" stop-color="#072c47"/>
+      <stop offset="1" stop-color="#041420"/>
+    </linearGradient>
+    <linearGradient id="glassC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(127,243,255,0.30)"/>
+      <stop offset="1" stop-color="rgba(127,243,255,0.12)"/>
+    </linearGradient>
+  </defs>
+  <rect width="390" height="844" fill="url(#bg)"/>
+
+  <!-- HUD -->
+  <rect x="14" y="16" width="46" height="46" rx="15" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.16)"/>
+  <rect x="24" y="28" width="6" height="22" rx="3" fill="#eaf7ff"/>
+  <rect x="36" y="28" width="6" height="22" rx="3" fill="#eaf7ff"/>
+  <rect x="72" y="21" width="88" height="36" rx="18" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="116" y="45" text-anchor="middle" font-family="Baloo 2, Arial" font-size="14" font-weight="800" fill="#59e2ff">Level 1</text>
+  <rect x="168" y="21" width="86" height="36" rx="18" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="176" y="34" font-size="9" font-weight="800" letter-spacing="1.5" fill="rgba(234,247,255,0.62)">SCORE</text>
+  <text x="211" y="50" text-anchor="middle" font-family="Baloo 2, Arial" font-size="13" font-weight="800" fill="#eaf7ff">180</text>
+  <rect x="262" y="21" width="80" height="36" rx="18" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.14)"/>
+  <circle cx="280" cy="39" r="9" fill="#ffd166" stroke="#c9932e" stroke-width="1.6"/>
+  <text x="316" y="44" text-anchor="middle" font-family="Baloo 2, Arial" font-size="14" font-weight="800" fill="#eaf7ff">300</text>
+
+  <!-- intro banner -->
+  <rect x="88" y="70" width="214" height="42" rx="21" fill="rgba(10,24,36,0.86)" stroke="#59e2ff" stroke-opacity="0.55"/>
+  <text x="195" y="97" text-anchor="middle" font-family="Baloo 2, Arial" font-size="16" font-weight="800" fill="#eaf7ff">Level 1 · Coral Reef</text>
+
+  <!-- board arena -->
+  <rect x="34" y="140" width="322" height="360" rx="22" fill="rgba(120,220,255,0.05)" stroke="#59e2ff" stroke-opacity="0.22"/>
+
+  <!-- tiles (5x4 with stacks) -->
+  <g>
+    <!-- row 1 -->
+    <rect x="52" y="158" width="60" height="60" rx="13" fill="url(#glassC)" stroke="#59e2ff" stroke-width="3"/>
+    <ellipse cx="82" cy="188" rx="17" ry="11" fill="#7ff3ff"/><circle cx="70" cy="185" r="3.5" fill="#123"/><path d="M96 183l14-9v18z" fill="#3fa8d8"/>
+    <rect x="122" y="158" width="60" height="60" rx="13" fill="url(#glassC)" stroke="#59e2ff" stroke-width="3"/>
+    <path d="M152 168l7 14 15.5 2.4-11 10.7 2.6 15.2-13.1-6.9-13.1 6.9 2.6-15.2-11-10.7 15.5-2.4z" fill="#ffd166"/>
+    <rect x="192" y="158" width="60" height="60" rx="13" fill="url(#glassC)" stroke="#59e2ff" stroke-width="3"/>
+    <circle cx="222" cy="188" r="16" fill="#ff8fa3"/><circle cx="216" cy="182" r="5" fill="#ffb3c0"/><circle cx="228" cy="192" r="4" fill="#ffb3c0"/>
+    <!-- row 2 stacked: base blocked (dim) + top offset -->
+    <rect x="52" y="228" width="60" height="60" rx="13" fill="rgba(127,243,255,0.10)" stroke="#59e2ff" stroke-opacity="0.22" stroke-width="3"/>
+    <g opacity="0.62"><ellipse cx="82" cy="258" rx="16" ry="10" fill="#9dffd0"/><circle cx="71" cy="255" r="3" fill="#123"/><path d="M95 254l11-7v14z" fill="#2f9e78"/></g>
+    <rect x="64" y="216" width="60" height="60" rx="13" fill="url(#glassC)" stroke="#59e2ff" stroke-width="3"/>
+    <circle cx="94" cy="246" r="15" fill="#c9a7ff"/><circle cx="88" cy="240" r="4.5" fill="#e2d6ff"/><circle cx="99" cy="249" r="3.5" fill="#e2d6ff"/>
+    <rect x="192" y="228" width="60" height="60" rx="13" fill="url(#glassC)" stroke="#59e2ff" stroke-width="3"/>
+    <path d="M222 262c-9-7-11-14-1-19 3-2 1-6 1-6s-2 4-5 5c-6 2-6 11 5 20z" fill="#ffd166"/>
+    <rect x="262" y="228" width="60" height="60" rx="13" fill="url(#glassC)" stroke="#59e2ff" stroke-width="3"/>
+    <circle cx="292" cy="258" r="15" fill="none" stroke="#7ff3ff" stroke-width="3.5"/><circle cx="287" cy="253" r="2.5" fill="#7ff3ff"/>
+    <!-- row 3 -->
+    <rect x="52" y="308" width="60" height="60" rx="13" fill="url(#glassC)" stroke="#59e2ff" stroke-width="3"/>
+    <path d="M64 338h36l-5 12h-26z" fill="#ffb84d"/><circle cx="82" cy="332" r="8" fill="#ffe3a3"/><circle cx="82" cy="328" r="2.4" fill="#c9932e"/>
+    <rect x="192" y="308" width="60" height="60" rx="13" fill="url(#glassC)" stroke="#59e2ff" stroke-width="3"/>
+    <circle cx="222" cy="338" r="15" fill="#8ad7ff"/><circle cx="215" cy="333" r="3.2" fill="#123"/><circle cx="228" cy="333" r="3.2" fill="#123"/>
+    <!-- row 4 -->
+    <rect x="122" y="400" width="60" height="60" rx="13" fill="url(#glassC)" stroke="#59e2ff" stroke-width="3"/>
+    <path d="M152 412c-8 2-13 9-11 17 1 5 5 9 11 9s10-4 11-9c2-8-3-15-11-17z" fill="#ff6f91"/>
+    <rect x="262" y="400" width="60" height="60" rx="13" fill="url(#glassC)" stroke="#59e2ff" stroke-width="3"/>
+    <path d="M274 436c6-16 24-22 36-14l-4 10-8 14z" fill="#7ff3ff" opacity="0.9"/><circle cx="288" cy="428" r="3" fill="#123"/>
+    <!-- flying tile (to tray) -->
+    <rect x="176" y="330" width="54" height="54" rx="12" fill="url(#glassC)" stroke="#59e2ff" stroke-width="3" transform="rotate(8 203 357)"/>
+    <ellipse cx="203" cy="357" rx="16" ry="10" fill="#9dffd0" transform="rotate(8 203 357)"/>
+  </g>
+
+  <!-- tray -->
+  <rect x="16" y="600" width="358" height="76" rx="16" fill="rgba(255,255,255,0.055)" stroke="#59e2ff" stroke-opacity="0.3"/>
+  <g fill="rgba(255,255,255,0.055)" stroke="rgba(255,255,255,0.14)">
+    <rect x="26" y="610" width="46" height="46" rx="10"/>
+    <rect x="78" y="610" width="46" height="46" rx="10"/>
+    <rect x="130" y="610" width="46" height="46" rx="10"/>
+    <rect x="182" y="610" width="46" height="46" rx="10"/>
+    <rect x="234" y="610" width="46" height="46" rx="10"/>
+    <rect x="286" y="610" width="46" height="46" rx="10"/>
+    <rect x="338" y="610" width="36" height="46" rx="10"/>
+  </g>
+  <!-- landed tiles in tray -->
+  <g>
+    <rect x="27" y="611" width="44" height="44" rx="10" fill="url(#glassC)" stroke="#59e2ff" stroke-width="2.5"/>
+    <ellipse cx="49" cy="633" rx="13" ry="8" fill="#7ff3ff"/>
+    <rect x="79" y="611" width="44" height="44" rx="10" fill="url(#glassC)" stroke="#59e2ff" stroke-width="2.5"/>
+    <ellipse cx="101" cy="633" rx="13" ry="8" fill="#7ff3ff"/>
+    <rect x="131" y="611" width="44" height="44" rx="10" fill="url(#glassC)" stroke="#59e2ff" stroke-width="2.5"/>
+    <path d="M153 619l5.5 11 12 1.8-8.6 8.4 2 12.2-10.4-5.5-10.4 5.5 2-12.2-8.6-8.4 12-1.8z" fill="#ffd166"/>
+  </g>
+  <!-- combo badge -->
+  <rect x="130" y="560" width="120" height="34" rx="17" fill="#ffd166"/>
+  <text x="190" y="583" text-anchor="middle" font-family="Baloo 2, Arial" font-size="15" font-weight="800" fill="#04222e">Combo x3</text>
+
+  <!-- booster bar -->
+  <g>
+    <rect x="28" y="724" width="104" height="72" rx="20" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.15)"/>
+    <path d="M56 744l14 0m-10-10l-6 6 6 6" stroke="#59e2ff" stroke-width="3" fill="none" stroke-linecap="round" transform="translate(14,6)"/>
+    <text x="80" y="752" text-anchor="middle" font-family="Baloo 2, Arial" font-size="12" font-weight="800" fill="#eaf7ff">Undo</text>
+    <rect x="54" y="760" width="52" height="20" rx="10" fill="rgba(143,230,164,0.18)"/>
+    <text x="80" y="774" text-anchor="middle" font-size="10" font-weight="800" fill="#9ff3b1">FREE</text>
+    <rect x="143" y="724" width="104" height="72" rx="20" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.15)"/>
+    <path d="M173 748h8l6 10h-10zm0 24h8l4-8h-8z" fill="#59e2ff" transform="translate(12,-4)"/>
+    <text x="195" y="752" text-anchor="middle" font-family="Baloo 2, Arial" font-size="12" font-weight="800" fill="#eaf7ff">Shuffle</text>
+    <rect x="169" y="760" width="52" height="20" rx="10" fill="rgba(143,230,164,0.18)"/>
+    <text x="195" y="774" text-anchor="middle" font-size="10" font-weight="800" fill="#9ff3b1">FREE</text>
+    <rect x="258" y="724" width="104" height="72" rx="20" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.15)"/>
+    <circle cx="310" cy="748" r="10" fill="none" stroke="#59e2ff" stroke-width="3"/>
+    <path d="M306 752l4-6 4 6z" fill="#59e2ff"/>
+    <text x="310" y="752" text-anchor="middle" font-family="Baloo 2, Arial" font-size="12" font-weight="800" fill="#eaf7ff">Hint</text>
+    <rect x="284" y="760" width="52" height="20" rx="10" fill="rgba(255,209,102,0.16)"/>
+    <text x="310" y="774" text-anchor="middle" font-size="10" font-weight="800" fill="#ffd166">75 ⬤</text>
+  </g>
+</svg>

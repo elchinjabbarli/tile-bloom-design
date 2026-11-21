@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" font-family="Nunito, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d4a6e"/>
+      <stop offset="1" stop-color="#041420"/>
+    </linearGradient>
+    <linearGradient id="glassC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(127,243,255,0.30)"/>
+      <stop offset="1" stop-color="rgba(127,243,255,0.12)"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe3a3"/>
+      <stop offset="1" stop-color="#ffb84d"/>
+    </linearGradient>
+  </defs>
+  <rect width="390" height="844" fill="url(#bg)"/>
+  <!-- dimmed board hint -->
+  <g opacity="0.16">
+    <rect x="52" y="170" width="54" height="54" rx="12" fill="url(#glassC)" stroke="#59e2ff" stroke-width="2"/>
+    <rect x="120" y="170" width="54" height="54" rx="12" fill="url(#glassC)" stroke="#59e2ff" stroke-width="2"/>
+    <rect x="188" y="170" width="54" height="54" rx="12" fill="url(#glassC)" stroke="#59e2ff" stroke-width="2"/>
+    <rect x="256" y="170" width="54" height="54" rx="12" fill="url(#glassC)" stroke="#59e2ff" stroke-width="2"/>
+    <rect x="120" y="300" width="54" height="54" rx="12" fill="url(#glassC)" stroke="#59e2ff" stroke-width="2"/>
+    <rect x="256" y="300" width="54" height="54" rx="12" fill="url(#glassC)" stroke="#59e2ff" stroke-width="2"/>
+  </g>
+  <!-- confetti -->
+  <g>
+    <rect x="70" y="120" width="8" height="5" rx="2" fill="#7ff3ff" transform="rotate(30 74 122)"/>
+    <rect x="300" y="90" width="9" height="5" rx="2" fill="#ffd166" transform="rotate(-20 304 92)"/>
+    <rect x="150" y="60" width="7" height="5" rx="2" fill="#ff8fa3" transform="rotate(50 153 62)"/>
+    <rect x="240" y="150" width="8" height="5" rx="2" fill="#9dffd0" transform="rotate(-40 244 152)"/>
+    <rect x="50" y="260" width="8" height="5" rx="2" fill="#c9a7ff" transform="rotate(15 54 262)"/>
+    <rect x="340" y="220" width="8" height="5" rx="2" fill="#ffffff" transform="rotate(-10 344 222)"/>
+  </g>
+
+  <!-- modal scrim -->
+  <rect width="390" height="844" fill="rgba(2,10,16,0.5)"/>
+
+  <!-- card -->
+  <rect x="35" y="200" width="320" height="430" rx="30" fill="rgba(10,24,36,0.86)" stroke="#59e2ff" stroke-opacity="0.45"/>
+
+  <!-- stars -->
+  <g font-size="54" font-weight="800" fill="#ffd166">
+    <text x="130" y="282" text-anchor="middle" font-family="Baloo 2, Arial">★</text>
+    <text x="195" y="292" text-anchor="middle" font-family="Baloo 2, Arial">★</text>
+    <text x="260" y="282" text-anchor="middle" font-family="Baloo 2, Arial">★</text>
+  </g>
+  <text x="195" y="326" text-anchor="middle" font-family="Baloo 2, Arial" font-size="25" font-weight="800" fill="#eaf7ff">Perfect!</text>
+
+  <!-- res grid -->
+  <rect x="60" y="348" width="130" height="58" rx="16" fill="rgba(255,255,255,0.06)"/>
+  <text x="70" y="368" font-size="10" font-weight="800" letter-spacing="1.4" fill="rgba(234,247,255,0.62)">SCORE</text>
+  <text x="125" y="392" text-anchor="middle" font-family="Baloo 2, Arial" font-size="20" font-weight="800" fill="#eaf7ff">1150</text>
+  <rect x="200" y="348" width="130" height="58" rx="16" fill="rgba(255,255,255,0.06)"/>
+  <text x="210" y="368" font-size="10" font-weight="800" letter-spacing="1.4" fill="rgba(234,247,255,0.62)">BEST</text>
+  <text x="265" y="392" text-anchor="middle" font-family="Baloo 2, Arial" font-size="20" font-weight="800" fill="#eaf7ff">1150</text>
+
+  <text x="195" y="436" text-anchor="middle" font-family="Baloo 2, Arial" font-size="19" font-weight="800" fill="#ffd166">+37 coins</text>
+
+  <!-- 2x coins -->
+  <rect x="95" y="456" width="200" height="52" rx="18" fill="url(#gold)"/>
+  <text x="195" y="489" text-anchor="middle" font-family="Baloo 2, Arial" font-size="16" font-weight="700" fill="#3d2504">🎁 2× coins</text>
+
+  <!-- actions -->
+  <rect x="55" y="530" width="90" height="52" rx="16" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.16)"/>
+  <text x="100" y="562" text-anchor="middle" font-family="Baloo 2, Arial" font-size="14" font-weight="700" fill="#eaf7ff">Home</text>
+  <rect x="150" y="530" width="90" height="52" rx="16" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.16)"/>
+  <text x="195" y="562" text-anchor="middle" font-family="Baloo 2, Arial" font-size="14" font-weight="700" fill="#eaf7ff">Replay</text>
+  <rect x="245" y="530" width="90" height="52" rx="16" fill="#59e2ff"/>
+  <text x="290" y="562" text-anchor="middle" font-family="Baloo 2, Arial" font-size="14" font-weight="700" fill="#04222e">Next</text>
+</svg>

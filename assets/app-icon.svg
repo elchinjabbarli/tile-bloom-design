@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#12588c"/>
+      <stop offset="0.5" stop-color="#0a3a5e"/>
+      <stop offset="1" stop-color="#072a45"/>
+    </linearGradient>
+    <linearGradient id="glassA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#67d8ff"/>
+      <stop offset="1" stop-color="#2b9ed6"/>
+    </linearGradient>
+    <linearGradient id="glassB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd97a"/>
+      <stop offset="1" stop-color="#f0a93c"/>
+    </linearGradient>
+    <linearGradient id="glassC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffa3b5"/>
+      <stop offset="1" stop-color="#f06f8c"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.45)"/>
+      <stop offset="1" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- soft light rays -->
+  <g opacity="0.10">
+    <polygon points="512,-60 340,-60 640,1084 820,1084" fill="#bdeeff"/>
+    <polygon points="780,-60 640,-60 940,1084 1090,1084" fill="#bdeeff"/>
+  </g>
+
+  <!-- tile 1 (back-left, cyan, heart) -->
+  <g transform="rotate(-16 365 385)">
+    <rect x="150" y="168" width="430" height="430" rx="96" fill="url(#glassA)" stroke="#eafcff" stroke-width="15"/>
+    <rect x="180" y="198" width="370" height="188" rx="76" fill="url(#gloss)"/>
+    <path transform="translate(-55,-75)" d="M420 560 C 340 500 300 430 355 385 C 395 350 420 372 420 395 C 420 372 445 350 485 385 C 540 430 500 500 420 560 Z" fill="#ffffff"/>
+  </g>
+
+  <!-- tile 2 (right, gold, star) -->
+  <g transform="rotate(11 660 470)">
+    <rect x="475" y="290" width="380" height="380" rx="86" fill="url(#glassB)" stroke="#fff7df" stroke-width="15"/>
+    <rect x="503" y="318" width="324" height="164" rx="66" fill="url(#gloss)"/>
+    <path d="M665 356 l30 62 68 10 -49 47 12 67 -61 -33 -61 33 12 -67 -49 -47 68 -10 z" fill="#ffffff"/>
+  </g>
+
+  <!-- tile 3 (front, pink, flower = brand bloom) -->
+  <g>
+    <rect x="322" y="450" width="380" height="380" rx="86" fill="url(#glassC)" stroke="#ffeef2" stroke-width="15"/>
+    <rect x="350" y="478" width="324" height="164" rx="66" fill="url(#gloss)"/>
+    <g transform="translate(512,640)">
+      <circle cx="0" cy="-62" r="36" fill="#ffffff"/>
+      <circle cx="-59" cy="-19" r="36" fill="#ffffff"/>
+      <circle cx="59" cy="-19" r="36" fill="#ffffff"/>
+      <circle cx="-37" cy="45" r="36" fill="#ffffff"/>
+      <circle cx="37" cy="45" r="36" fill="#ffffff"/>
+      <circle cx="0" cy="0" r="33" fill="#ffd166"/>
+      <circle cx="-8" cy="-8" r="8" fill="#c9932e" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- sparks -->
+  <path d="M830 300 l11 47 47 11 -47 11 -11 47 -11 -47 -47 -11 47 -11 z" fill="#ffffff" opacity="0.92"/>
+  <path d="M196 590 l8 34 34 8 -34 8 -8 34 -8 -34 -34 -8 34 -8 z" fill="#ffffff" opacity="0.6"/>
+</svg>
