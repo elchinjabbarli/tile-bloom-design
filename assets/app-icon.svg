@@ -1,66 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#12588c"/>
-      <stop offset="0.5" stop-color="#0a3a5e"/>
-      <stop offset="1" stop-color="#072a45"/>
-    </linearGradient>
+    <radialGradient id="bg" cx="0.5" cy="0.42" r="0.78">
+      <stop offset="0" stop-color="#1b6a9c"/>
+      <stop offset="0.55" stop-color="#0d3f66"/>
+      <stop offset="1" stop-color="#061c30"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#67d8ff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#67d8ff" stop-opacity="0"/>
+    </radialGradient>
     <linearGradient id="glassA" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#67d8ff"/>
-      <stop offset="1" stop-color="#2b9ed6"/>
+      <stop offset="0" stop-color="#8ae6ff"/>
+      <stop offset="0.45" stop-color="#38a4d6"/>
+      <stop offset="1" stop-color="#1d739f"/>
     </linearGradient>
     <linearGradient id="glassB" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ffd97a"/>
-      <stop offset="1" stop-color="#f0a93c"/>
+      <stop offset="0" stop-color="#ffe08a"/>
+      <stop offset="0.45" stop-color="#f7b342"/>
+      <stop offset="1" stop-color="#c9801c"/>
     </linearGradient>
     <linearGradient id="glassC" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ffa3b5"/>
-      <stop offset="1" stop-color="#f06f8c"/>
+      <stop offset="0" stop-color="#ffb9c9"/>
+      <stop offset="0.45" stop-color="#f27a92"/>
+      <stop offset="1" stop-color="#d04f68"/>
+    </linearGradient>
+    <linearGradient id="goldCenter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe9a8"/>
+      <stop offset="0.55" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#c98a2e"/>
     </linearGradient>
     <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="rgba(255,255,255,0.45)"/>
+      <stop offset="0" stop-color="rgba(255,255,255,0.38)"/>
       <stop offset="1" stop-color="rgba(255,255,255,0)"/>
     </linearGradient>
+    <filter id="tileShadow" x="-40%" y="-40%" width="180%" height="200%">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#03141f" flood-opacity="0.55"/>
+    </filter>
+    <filter id="glyphShadow" x="-40%" y="-40%" width="180%" height="200%">
+      <feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#0a2030" flood-opacity="0.4"/>
+    </filter>
+    <filter id="sparkGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feDropShadow dx="0" dy="0" stdDeviation="13" flood-color="#7ff3ff" flood-opacity="0.9"/>
+    </filter>
+    <filter id="contactShadow" x="-60%" y="-220%" width="220%" height="540%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <clipPath id="clipA"><rect x="140" y="170" width="380" height="380" rx="88"/></clipPath>
+    <clipPath id="clipB"><rect x="555" y="235" width="370" height="370" rx="86"/></clipPath>
+    <clipPath id="clipC"><rect x="290" y="460" width="400" height="400" rx="92"/></clipPath>
   </defs>
 
   <rect width="1024" height="1024" fill="url(#bg)"/>
-
-  <!-- soft light rays -->
-  <g opacity="0.10">
-    <polygon points="512,-60 340,-60 640,1084 820,1084" fill="#bdeeff"/>
-    <polygon points="780,-60 640,-60 940,1084 1090,1084" fill="#bdeeff"/>
-  </g>
+  <ellipse cx="512" cy="560" rx="480" ry="430" fill="url(#glow)"/>
+  <!-- ground contact shadow -->
+  <ellipse cx="490" cy="884" rx="250" ry="26" fill="rgba(3,14,26,0.38)" filter="url(#contactShadow)"/>
 
   <!-- tile 1 (back-left, cyan, heart) -->
-  <g transform="rotate(-16 365 385)">
-    <rect x="150" y="168" width="430" height="430" rx="96" fill="url(#glassA)" stroke="#eafcff" stroke-width="15"/>
-    <rect x="180" y="198" width="370" height="188" rx="76" fill="url(#gloss)"/>
-    <path transform="translate(-55,-75)" d="M420 560 C 340 500 300 430 355 385 C 395 350 420 372 420 395 C 420 372 445 350 485 385 C 540 430 500 500 420 560 Z" fill="#ffffff"/>
+  <g transform="rotate(-16 330 360)">
+    <g filter="url(#tileShadow)">
+      <rect x="140" y="170" width="380" height="380" rx="88" fill="url(#glassA)" stroke="rgba(255,255,255,0.5)" stroke-width="10"/>
+    </g>
+    <g clip-path="url(#clipA)">
+      <rect x="140" y="170" width="380" height="186" rx="88" fill="url(#gloss)"/>
+    </g>
+    <path filter="url(#glyphShadow)" transform="translate(330 362) scale(1.42)" d="M0,74 C-84,14 -86,-56 -43,-56 C-16,-56 0,-37 0,-19 C0,-37 16,-56 43,-56 C86,-56 84,14 0,74 Z" fill="#ffffff"/>
   </g>
 
   <!-- tile 2 (right, gold, star) -->
-  <g transform="rotate(11 660 470)">
-    <rect x="475" y="290" width="380" height="380" rx="86" fill="url(#glassB)" stroke="#fff7df" stroke-width="15"/>
-    <rect x="503" y="318" width="324" height="164" rx="66" fill="url(#gloss)"/>
-    <path d="M665 356 l30 62 68 10 -49 47 12 67 -61 -33 -61 33 12 -67 -49 -47 68 -10 z" fill="#ffffff"/>
+  <g transform="rotate(11 740 420)">
+    <g filter="url(#tileShadow)">
+      <rect x="555" y="235" width="370" height="370" rx="86" fill="url(#glassB)" stroke="rgba(255,255,255,0.5)" stroke-width="10"/>
+    </g>
+    <g clip-path="url(#clipB)">
+      <rect x="555" y="235" width="370" height="182" rx="86" fill="url(#gloss)"/>
+    </g>
+    <polygon filter="url(#glyphShadow)" transform="translate(740 422) scale(1.09)" points="0,-108 27,-37.2 102.7,-33.4 43.7,14.2 63.5,87.4 0,46 -63.5,87.4 -43.7,14.2 -102.7,-33.4 -27,-37.2" fill="#ffffff"/>
   </g>
 
-  <!-- tile 3 (front, pink, flower = brand bloom) -->
-  <g>
-    <rect x="322" y="450" width="380" height="380" rx="86" fill="url(#glassC)" stroke="#ffeef2" stroke-width="15"/>
-    <rect x="350" y="478" width="324" height="164" rx="66" fill="url(#gloss)"/>
-    <g transform="translate(512,640)">
-      <circle cx="0" cy="-62" r="36" fill="#ffffff"/>
-      <circle cx="-59" cy="-19" r="36" fill="#ffffff"/>
-      <circle cx="59" cy="-19" r="36" fill="#ffffff"/>
-      <circle cx="-37" cy="45" r="36" fill="#ffffff"/>
-      <circle cx="37" cy="45" r="36" fill="#ffffff"/>
-      <circle cx="0" cy="0" r="33" fill="#ffd166"/>
-      <circle cx="-8" cy="-8" r="8" fill="#c9932e" opacity="0.6"/>
+  <!-- tile 3 (front, pink, bloom flower = brand) -->
+  <g transform="rotate(5 490 660)">
+    <g filter="url(#tileShadow)">
+      <rect x="290" y="460" width="400" height="400" rx="92" fill="url(#glassC)" stroke="rgba(255,255,255,0.5)" stroke-width="10"/>
+    </g>
+    <g clip-path="url(#clipC)">
+      <rect x="290" y="460" width="400" height="196" rx="92" fill="url(#gloss)"/>
+    </g>
+    <g filter="url(#glyphShadow)" transform="translate(490 666)">
+      <circle cx="0" cy="-102" r="62" fill="#ffffff"/>
+      <circle cx="97.1" cy="-31.5" r="62" fill="#ffffff"/>
+      <circle cx="59.9" cy="82.5" r="62" fill="#ffffff"/>
+      <circle cx="-59.9" cy="82.5" r="62" fill="#ffffff"/>
+      <circle cx="-97.1" cy="-31.5" r="62" fill="#ffffff"/>
+      <circle cx="0" cy="0" r="52" fill="url(#goldCenter)"/>
+      <circle cx="-14" cy="-14" r="12" fill="#ffffff" opacity="0.85"/>
     </g>
   </g>
 
-  <!-- sparks -->
-  <path d="M830 300 l11 47 47 11 -47 11 -11 47 -11 -47 -47 -11 47 -11 z" fill="#ffffff" opacity="0.92"/>
-  <path d="M196 590 l8 34 34 8 -34 8 -8 34 -8 -34 -34 -8 34 -8 z" fill="#ffffff" opacity="0.6"/>
+  <!-- sparks (one consistent style) -->
+  <path filter="url(#sparkGlow)" transform="translate(872 250)" d="M0,-32 L8,-8 L32,0 L8,8 L0,32 L-8,8 L-32,0 L-8,-8 Z" fill="#ffffff" opacity="0.95"/>
+  <path filter="url(#sparkGlow)" transform="translate(178 640) scale(0.62)" d="M0,-32 L8,-8 L32,0 L8,8 L0,32 L-8,8 L-32,0 L-8,-8 Z" fill="#ffffff" opacity="0.85"/>
 </svg>
+</body></html>
