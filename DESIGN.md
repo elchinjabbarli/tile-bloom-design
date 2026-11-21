@@ -1,7 +1,7 @@
 # Tile Bloom — DESIGN.md
 
 > Single source of truth for the look & feel of **Tile Bloom**, a relaxing triple-tile
-> matching puzzle. Version **1.0.1**. This document follows the open DESIGN.md standard
+> matching puzzle. Version **1.3.0**. This document follows the open DESIGN.md standard
 > and is ready to paste into Google Stitch ("Start with your design" → *Paste existing
 > DESIGN.md*).
 
@@ -114,6 +114,18 @@ Press = 0.95 scale (120ms). Disabled = 45% opacity.
 
 **HUD chips**: 10px-blur glass pills, 800-weight numerals, uppercase micro labels.
 
+**Heart bar (v1.3)**: dark pill (5 pips, 22px each) under the chapter chip; filled pip =
+rose gradient `#ffa3b5→#f4517a→#bf2550` + ink outline + highlight ellipse; empty pip =
+light desaturated silhouette (grayscale 1.15 brightness, 32% alpha). Timer text 12px
+800-weight under the pill; +1 pip pops 0.4s overshoot 1.4.
+
+**Mission row (v1.3)**: glass card row — 38px icon tile (per kind: trio/flag/bolt/
+star/sparkle), 800-weight title, 9px progress bar (cyan→accent fill, green when done),
+progress `a / b`, reward chips (heart + coin minis) and a compact Claim button.
+
+**Gift card (v1.3)**: gold-tinted glass row — 44px gift icon tile, copy + reward line,
+compact claim button; claimed state = 55% opacity.
+
 **Modals**: full-screen 50% black scrim + 7px blur; card = `rgba(10,24,36,0.86)`, accent
 45% 1px border, 30px radius, pop-in (0.32s, overshoot 1.3). Star reveal staggered 260ms.
 
@@ -145,22 +157,34 @@ Sound (all synthesized, WebAudio): pick pluck 560→720Hz; match pentatonic arpe
 
 ## 8. Screens
 
-1. **Home** — logo, subtitle, Bloomie (192), chapter·level chip, primary Play, ghost
-   How-to + gear, star/coin stats, version footer; decorative glass tiles float in
-   corners (50% alpha).
+1. **Home** — logo, subtitle, Bloomie (192), chapter·level chip, **heart bar (5 pips
+   + regen countdown)**, primary Play, ghost How-to + Missions (with red claim badge) +
+   gear, star/coin stats, version footer; decorative glass tiles float in corners (50%
+   alpha).
 2. **Tutorial (modal)** — 3 steps with tile trio visual + copy.
-3. **Gameplay** — HUD (pause, level chip, score, coins, combo badge), board arena (glass
-   plate hugging tile bounds), 7-slot tray, booster bar, intro banner pill (level ·
-   chapter, slide 1.05s).
+3. **Gameplay** — HUD (pause, level chip, score, coins, **hearts chip**, combo badge),
+   board arena (glass plate hugging tile bounds), 7-slot tray, booster bar, intro banner
+   pill (level · chapter, slide 1.05s).
 4. **Pause** — resume / restart / quit.
 5. **Level complete** — 3 star slots (gold pop), score/best grid, +coins, 2× coins
    (rewarded), next/replay/home; chapter-end variant headline.
-6. **Fail** — sad Bloomie, continue (rewarded, 8s countdown ring), retry, home.
+6. **Fail** — sad Bloomie, heart-cost hint line (rose, heart mini icon), continue
+   (rewarded, 8s countdown ring), retry, home.
 7. **Settings** — sound/music/haptics switches, EN/TR segmented, about block (version,
    copyright, privacy link).
+8. **Daily missions (modal)** — gold gift card on top, 3 mission rows (progress bars,
+   claim buttons, heart+coin rewards), Later.
+9. **Out-of-hearts gate (modal)** — 5 empty heart sockets, "next heart in mm:ss"
+   countdown, rewarded-ad +1 heart button, go-to-missions, later.
 
 Flows: Home → Play → (intro 1s) → Gameplay → Complete → [Next → maybe interstitial] →
-next level; Fail → Continue (rewarded, ≤2/level) / Retry / Home.
+next level; Fail → Continue (rewarded, ≤2/level, rescues the heart toll) / Retry
+(−1 heart) / Home (−1 heart); hearts empty → gate → [rewarded ad | missions | wait].
+
+Gameplay economy (v1.3): 5 hearts max, one lost per failed level, 20min/heart regen;
+daily missions + gift are the heart faucet. Difficulty curve: icon variety 5→12,
+board budget 36→150 tiles, layers 2→5 — every level still provably clearable, but the
+careless-play death rate rises from ~15% (lvl 1) to ~85% (lvl 12) to ~100% (lvl 30+).
 
 ## 9. Accessibility & platform
 
