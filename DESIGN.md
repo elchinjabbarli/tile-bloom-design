@@ -105,16 +105,10 @@ outer faint edge 35%; corner spark dot. Blocked (buried) tiles: same geometry at
 fill, 22% frame, icon 62% alpha + dark veil 30%. Top-of-stack tiles pulse a faint accent
 outline (alpha 0.15–0.28 sine).
 
-**Golden bloom tile (v1.6.0 special)**: the joker — drawn like any candy glyph in the
-gold family (`#ffd166` form, `#ffefb8` light, `#ffb830` shade) but sealed under a
-breathing double gold ring (radius +1.5px, alpha 0.15–0.85 sine 3.1rad/s). Tap = free
-pop: never rides the tray, +150 pts, counts as a thaw tick. 3 per level from level 5;
-never frozen, never shuffled.
-
 **Frost-sealed tile (v1.6.0 special)**: top-of-stack tile sealed under ice — whitish
 frost veil (~62% icy white `rgba(214,240,255,…)`) with crack strokes that grow per
 remaining layer; unpickable (glassy knuckle-tap sfx on tap). From level 8, 2 layers
-(3 from level 60), 4–16 surface tiles per level; every trio (or golden pop, or hammer
+(3 from level 60), 4–16 surface tiles per level; every trio (or hammer
 smash) thaws ALL frozen tiles by one layer — shedding the last layer
 shatters white-blue particles.
 
@@ -160,7 +154,6 @@ Sad = frown path + 55% petal opacity.
 | Match | neon ring expand 14→60px, 12 shards (420px/s gravity), `+score` popup rise 46px/s |
 | Combo | slim flame chip (amber `#ffd166`→coral when ≥5) appears between the level and score chips while the combo window runs, `×N` pops 0.35s overshoot 1.4 per step; pitch shift per combo |
 | Combo fanfare (v1.7.0) | milestones ×3/×5/×8/×12: 3 firework volleys around the board + big praise banner ("Nice!/Great!/Amazing!/Unstoppable!" scale-in over the board, 1.35s); ×8+ adds a 40-confetti shower |
-| Golden pop (v1.6.0) | 4-corner confetti volleys (gold family) + center burst + `+150` popup rise + 0.2 white flash |
 | Frost thaw (v1.6.0) | per-tile white-blue shard burst (9 shards, 0.55s) each time a layer sheds |
 | Hammer smash (v1.7.0) | armed button pulses (tilted head + orange glow); smash = 18 shards of the victim's own color + frost shatter if icy + 0.4 screen shake + "SMASH!" popup |
 | Wand zap (v1.6.0) | gold + violet sparkle volleys on the trio tiles, `+pts` popup, 0.16 flash |
@@ -173,8 +166,7 @@ Sad = frown path + 55% petal opacity.
 
 Sound (all synthesized, WebAudio): pick pluck 560→720Hz; match pentatonic arpeggio
 (+combo semitone); fail saw descent; win fanfare; coin ding; frozen glassy knuckle tap
-1400Hz sine + noise; thaw double snap + melt drip; gold pop rising triangle arpeggio
-880→1760Hz; hammer smash woody knock 190Hz triangle + two noise crunches; wand zap three
+1400Hz sine + noise; thaw double snap + melt drip; hammer smash woody knock 190Hz triangle + two noise crunches; wand zap three
 rising stars + sweep; generative ambient music 84bpm pentatonic random-walk, root per
 chapter (A/C/D/G), detuned-triangle pads.
 
@@ -184,9 +176,8 @@ chapter (A/C/D/G), detuned-triangle pads.
    + regen countdown)**, primary Play, ghost How-to + Missions (with red claim badge) +
    gear, star/coin stats, version footer; decorative glass tiles float in corners (50%
    alpha).
-2. **Tutorial (modal)** — 6 steps with tile trio visuals + copy: collect-to-tray,
-   trio burst, tray overflow = fail, golden tiles (v1.6.0), frost sealing (v1.6.0),
-   the Hammer (v1.7.0).
+2. **Tutorial (modal)** — 5 steps with tile trio visuals + copy: collect-to-tray,
+   trio burst, tray overflow = fail, frost sealing (v1.6.0), the Hammer (v1.7.0).
 3. **Gameplay** — HUD (pause, level chip, slim flame combo chip while a combo runs
    (v1.7.0), score chip, coins, **hearts chip**), board arena (glass plate hugging tile
    bounds; deep stacked towers with right/up layer drift, headroom reserved above the
@@ -217,17 +208,18 @@ next level; Fail → Continue (rewarded, ≤2/level, rescues the heart toll) / R
 Gameplay economy (v1.3): 5 hearts max, one lost per failed level, 20min/heart regen;
 daily missions + gift are the heart faucet. Difficulty curve v5 (v1.6.0 "much harder,
 more icons, more fun" brief): icon variety 6→24 by level 21 (100-glyph library, chapter
-pools of 35–37), board budget 36→219 tiles (72 trios + 3 golden blooms),
+pools of 35–37), board budget 36→216 tiles (72 trios),
 layers 2→8 with density-capped cells for real deep towers, greedy pressure target
-3→6 by level 25, and special tiles — golden blooms (lvl 5+) and 2–3-layer frost
+3→6 by level 25, and the frost special — 2–3-layer surface ice
 (lvl 8+) — every level still provably clearable, but the careless-play
 death rate is 100% from level 8 (only levels 1–2 stay gentle as the fair start).
 v1.7.0 "the fun pass": the Hammer booster smashes
 any tile (frost included) for tray-pressure rescue, and combo milestones (×3/×5/×8/
 ×12) fire board-wide fireworks with localized praise banners — undo now also
 re-freezes thawed frost honestly, and a fail returns in-flight picks to the board.
-v1.7.1: coin bags removed per player feedback (the golden blooms remain the only
-free-pop special; board budgets drop 221→219).
+v1.7.1: coin bags removed per player feedback. v1.7.2: the golden bloom free-pop
+special removed too — every tile now rides the same tray economy (board budget
+219→216, no free pops anywhere).
 
 ## 9. Accessibility & platform
 
@@ -244,7 +236,7 @@ free-pop special; board budgets drop 221→219).
 | App icon (master) | `assets/app-icon.svg` (+1024/512/192/180 PNG) |
 | Design tokens | `design-tokens.json` |
 | Screen mockups | `screens/menu.svg`, `screens/gameplay.svg`, `screens/level-complete.svg`, `screens/fail.svg` (390×844) |
-| Icon glyph library | 100 procedural canvas glyphs (four chapter pools of 35–37: fish, shell, starfish, crab, octo, bubble, pearl, anchor, wave, seahorse, jellyfish, turtle, squid, coral, puffer, shrimp, urchin, manta, sailboat, lighthouse, seagull, croissant, cupcake, cookie, donut, candy, coffee, icecream, cherry, macaron, waffle, pretzel, pie, teapot, milkshake, gingerbread, pancake, lollipop, popcorn, icepop, brownie, cheesecake, rocket, planet, comet, ufo, alien, galaxy, spark, astronaut, satellite, telescope, meteor, atom, radar, robot, capsule, beacon, blackhole, wormhole, moonrock, butterfly, bee, clover, mushroom, acorn, bird, pebble, lotus, candle, dragonfly, ladybug, snail, pinecone, bamboo, bonsai, owl, fox, koi, hedgehog, lantern, windchime + 18 universal incl. balloon & pinwheel) + the `wild` golden joker — drawn in code, no binary assets |
+| Icon glyph library | 100 procedural canvas glyphs (four chapter pools of 35–37: fish, shell, starfish, crab, octo, bubble, pearl, anchor, wave, seahorse, jellyfish, turtle, squid, coral, puffer, shrimp, urchin, manta, sailboat, lighthouse, seagull, croissant, cupcake, cookie, donut, candy, coffee, icecream, cherry, macaron, waffle, pretzel, pie, teapot, milkshake, gingerbread, pancake, lollipop, popcorn, icepop, brownie, cheesecake, rocket, planet, comet, ufo, alien, galaxy, spark, astronaut, satellite, telescope, meteor, atom, radar, robot, capsule, beacon, blackhole, wormhole, moonrock, butterfly, bee, clover, mushroom, acorn, bird, pebble, lotus, candle, dragonfly, ladybug, snail, pinecone, bamboo, bonsai, owl, fox, koi, hedgehog, lantern, windchime + 18 universal incl. balloon & pinwheel) — drawn in code, no binary assets |
 
 No third-party imagery, fonts, or audio; everything is original and generated.
 
