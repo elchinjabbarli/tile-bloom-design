@@ -254,15 +254,6 @@
         "deep": 3
       },
       "thawPerTrio": 1
-    },
-    "coinBag": {
-      "form": "#e8975c",
-      "light": "#ffd9a8",
-      "shade": "#a05a28",
-      "coinsMin": 15,
-      "coinsMax": 25,
-      "perLevel": 2,
-      "fromLevel": 3
     }
   },
   "boosters": {
