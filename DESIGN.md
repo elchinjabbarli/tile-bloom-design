@@ -1,7 +1,7 @@
 # Tile Bloom — DESIGN.md
 
 > Single source of truth for the look & feel of **Tile Bloom**, a relaxing triple-tile
-> matching puzzle. Version **1.5.1**. This document follows the open DESIGN.md standard
+> matching puzzle. Version **1.5.2**. This document follows the open DESIGN.md standard
 > and is ready to paste into Google Stitch ("Start with your design" → *Paste existing
 > DESIGN.md*).
 
@@ -146,6 +146,7 @@ Sad = frown path + 55% petal opacity.
 | Tile lands | spring lerp to grouped slot (14/s) |
 | Match | neon ring expand 14→60px, 12 shards (420px/s gravity), `+score` popup rise 46px/s |
 | Combo | ×N gold pill swaps into the score-chip label slot, pop 0.35s overshoot 1.4 per combo step (never floats over the board); pitch shift per combo |
+| Booster press | scale 0.93 0.12s; disabled → saturate 0.55 |
 | Level complete | white flash 0.55 → 110 confetti 1.8–3.2s, staggered stars |
 | Fail | 0.55s screen shake ±9px; tray red pulse 1.2s |
 | Board idle | accent outline sine 2.4rad/s; ambient particles drift 8–26px/s |
@@ -164,7 +165,11 @@ Sound (all synthesized, WebAudio): pick pluck 560→720Hz; match pentatonic arpe
 2. **Tutorial (modal)** — 3 steps with tile trio visual + copy.
 3. **Gameplay** — HUD (pause, level chip, score chip with inline ×N combo pill,
    coins, **hearts chip**), board arena (glass plate hugging tile bounds), 7-slot
-   tray, booster bar, intro banner pill (level · chapter, slide 1.05s).
+   **staged glass tray** (raised plate, drop shadow, recessed wells; picked tiles
+   seat at 0.86 slot scale so the well lip stays visible), **compact candy booster
+   bar** (~60px tall, icon+label head row + cost pill, color-coded mint/violet/
+   amber, FREE/coin pills candy-pop with dark ink), intro banner pill (level ·
+   chapter, slide 1.05s); tray and booster row separated by ~24px breathing gap.
 4. **Pause** — resume / restart / quit.
 5. **Level complete** — 3 star slots (gold pop), score/best grid, +coins, 2× coins
    (rewarded), next/replay/home; chapter-end variant headline.
