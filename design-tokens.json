@@ -1,5 +1,5 @@
 {
-  "version": "1.5.2",
+  "version": "1.6.0",
   "name": "Tile Bloom",
   "tagline": "Triple Match Puzzle",
   "hearts": {
@@ -16,7 +16,13 @@
     "perDay": 3,
     "giftCoins": 25,
     "giftHearts": 1,
-    "kinds": ["matches", "levels", "combo", "stars", "clean"]
+    "kinds": [
+      "matches",
+      "levels",
+      "combo",
+      "stars",
+      "clean"
+    ]
   },
   "difficulty": {
     "varietyStart": 5,
@@ -225,5 +231,23 @@
     "level-complete",
     "fail",
     "settings"
-  ]
+  ],
+  "specialTiles": {
+    "goldenBloom": {
+      "form": "#ffd166",
+      "light": "#ffefb8",
+      "shade": "#ffb830",
+      "points": 150,
+      "ringSine": "3.1rad/s"
+    },
+    "frost": {
+      "veil": "rgba(214,240,255,0.62)",
+      "layers": {
+        "early": 2,
+        "deepFromLevel": 60,
+        "deep": 3
+      },
+      "thawPerTrio": 1
+    }
+  }
 }
