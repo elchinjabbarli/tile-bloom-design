@@ -1,5 +1,5 @@
 {
-  "version": "1.7.0",
+  "version": "1.8.0",
   "name": "Tile Bloom",
   "tagline": "Triple Match Puzzle",
   "hearts": {
@@ -10,7 +10,9 @@
     "roseMid": "#f4517a",
     "roseDeep": "#bf2550",
     "inkOutline": "#8f1e40",
-    "emptyPipAlpha": 0.32
+    "emptyPipAlpha": 0.32,
+    "mercyLevel": 10,
+    "autoHintAfterFails": 2
   },
   "missions": {
     "perDay": 3,
@@ -21,8 +23,14 @@
       "levels",
       "combo",
       "stars",
-      "clean"
-    ]
+      "clean",
+      "thaw",
+      "boosters",
+      "hammer",
+      "collect",
+      "score"
+    ],
+    "adaptive": "frost/hammer/collect from level 8, score from 12; gentle tiers <=8, heavy >=25"
   },
   "difficulty": {
     "varietyStart": 6,
@@ -225,7 +233,12 @@
       "duration": 0.4,
       "amplitude": 9
     },
-    "comboFanfares": [3, 5, 8, 12],
+    "comboFanfares": [
+      3,
+      5,
+      8,
+      12
+    ],
     "particleLayers": "ambient behind tiles, celebratory FX above",
     "prefersReducedMotion": "honor"
   },
@@ -250,15 +263,73 @@
     }
   },
   "boosters": {
-    "undo": { "cost": 100, "tint": "#7ee0c3" },
-    "shuffle": { "cost": 150, "tint": "#b18cff" },
-    "hint": { "cost": 75, "tint": "#ffd166" },
-    "wand": { "cost": 200, "tint": "#ff9fb2" },
+    "undo": {
+      "cost": 100,
+      "tint": "#7ee0c3"
+    },
+    "shuffle": {
+      "cost": 150,
+      "tint": "#b18cff"
+    },
+    "hint": {
+      "cost": 75,
+      "tint": "#ffd166"
+    },
+    "wand": {
+      "cost": 200,
+      "tint": "#ff9fb2"
+    },
     "hammer": {
       "cost": 250,
       "tint": "#ff8a66",
       "armedGlow": "rgba(255,138,102,0.55)",
       "smashesFrozen": true
     }
+  },
+  "collection": {
+    "milestones": [
+      10,
+      25,
+      50,
+      75,
+      100
+    ],
+    "milestoneCoins": [
+      25,
+      50,
+      75,
+      100,
+      200
+    ],
+    "silhouette": "grayscale(1) brightness(0.5) opacity(0.45)",
+    "cell": {
+      "size": 46,
+      "radius": 13
+    },
+    "counting": "monotonic — undo never un-collects"
+  },
+  "journeyMap": {
+    "nodes": 120,
+    "sections": 4,
+    "nodeSize": {
+      "normal": 54,
+      "milestone": 60,
+      "gate": 68
+    },
+    "zigzag": "sin(i/29 * pi * 5) * 44px",
+    "unlock": "current node pop-in 0.6s overshoot, pulse ring 2.2s loop",
+    "states": [
+      "done (mint fill + star pips)",
+      "current (accent ring + pulse)",
+      "locked (lock glyph)"
+    ]
+  },
+  "adChoice": {
+    "coins": 100,
+    "options": [
+      "continue",
+      "heart",
+      "coins"
+    ]
   }
 }

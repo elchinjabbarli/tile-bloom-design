@@ -159,7 +159,7 @@ Sad = frown path + 55% petal opacity.
 | Wand zap (v1.6.0) | gold + violet sparkle volleys on the trio tiles, `+pts` popup, 0.16 flash |
 | Booster press | scale 0.93 0.12s; disabled → saturate 0.55 |
 | Level complete | white flash 0.55 → 110 confetti 1.8–3.2s, staggered stars |
-| Fail | 0.55s screen shake ±9px; tray red pulse 1.2s; in-flight picks fly back to the board |
+| Fail | 0.55s screen shake ±9px; tray red pulse 1.2s; in-flight picks fly back to the board; rewarded ad is a CHOOSER (continue/+1 heart/+100 coins), no countdown pressure (v1.8.0) |
 | Board idle | accent outline sine 2.4rad/s; ambient particles drift 8–26px/s |
 | Particle layering (v1.7.0) | ambient drift renders behind the tiles; every celebratory FX (coins, bursts, banners, popups) renders in a second pass ABOVE the tiles so nothing hides mid-board |
 | Reduced motion | all durations → ~0 (prefers-reduced-motion) |
@@ -178,6 +178,18 @@ chapter (A/C/D/G), detuned-triangle pads.
    alpha).
 2. **Tutorial (modal)** — 5 steps with tile trio visuals + copy: collect-to-tray,
    trio burst, tray overflow = fail, frost sealing (v1.6.0), the Hammer (v1.7.0).
+2b. **Journey map (v1.8.0)** — the chapter chip on Home opens the map: 120 level
+   nodes on a winding dashed path through all four chapters (30 per section,
+   header counts cleared levels); done nodes mint with star pips, the current
+   node pops in with an accent pulse ring, locked nodes show a lock glyph and
+   refuse politely; every 10th level is a bigger milestone tile, chapter ends
+   (30/60/90/120) are gold trophy gates. Tapping any unlocked node starts that
+   level through the hearts gate.
+2c. **Tile album (v1.8.0)** — 100 collectible icons across the four chapter
+   tabs (baked glyph canvases; uncollected render as dark silhouettes with a
+   grayscale filter, collected show a tile count). Distinct-icon milestones
+   10/25/50/75/100 pay one-time coins (25/50/75/100/200) with a toast.
+   Collection is monotonic — undo never un-collects.
 3. **Gameplay** — HUD (pause, level chip, slim flame combo chip while a combo runs
    (v1.7.0), score chip, coins, **hearts chip**), board arena (glass plate hugging tile
    bounds; deep stacked towers with right/up layer drift, headroom reserved above the
@@ -220,6 +232,17 @@ re-freezes thawed frost honestly, and a fail returns in-flight picks to the boar
 v1.7.1: coin bags removed per player feedback. v1.7.2: the golden bloom free-pop
 special removed too — every tile now rides the same tray economy (board budget
 219→216, no free pops anywhere).
+v1.8.0 — the retention pass (no new content systems for the board itself):
+levels 1–10 are the heart-mercy band (failures cost NO heart, the fail screen
+says so), two consecutive fails on a level auto-show a free 4.5s hint, the
+level-complete screen gains a run report (best combo ×N, boosters used, PERFECT
+RUN badge for clean clears, NEW BEST! badge when beating the stored best), the
+fail screen's rewarded ad became a CHOICE (continue this level / +1 heart /
++100 coins — the 8s countdown pressure is gone), daily missions widened to ten
+kinds (thaw layers, booster uses, hammer smashes, album collects, single-level
+score) and roll adaptively to the player's level, the booster bar grew a "?"
+info modal (what each booster does + cost + first-use-free tip), and the tile
+album + journey map give the long-term goal the game lacked.
 
 ## 9. Accessibility & platform
 
