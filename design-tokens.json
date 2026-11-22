@@ -1,5 +1,5 @@
 {
-  "version": "1.6.0",
+  "version": "1.7.0",
   "name": "Tile Bloom",
   "tagline": "Triple Match Puzzle",
   "hearts": {
@@ -25,15 +25,15 @@
     ]
   },
   "difficulty": {
-    "varietyStart": 5,
-    "varietyMax": 12,
+    "varietyStart": 6,
+    "varietyMax": 24,
     "tilesStart": 36,
-    "tilesMax": 150,
+    "tilesMax": 221,
     "layersStart": 2,
-    "layersMax": 5,
-    "misplayDeathRateL1": 0.15,
-    "misplayDeathRateL12": 0.85,
-    "misplayDeathRateL30Plus": 1.0
+    "layersMax": 8,
+    "misplayDeathRateL1": 0.0,
+    "misplayDeathRateL12": 1.0,
+    "misplayDeathRateL8Plus": 1.0
   },
   "colors": {
     "core": {
@@ -221,6 +221,12 @@
       "duration": 0.55,
       "amplitude": 9
     },
+    "hammerShake": {
+      "duration": 0.4,
+      "amplitude": 9
+    },
+    "comboFanfares": [3, 5, 8, 12],
+    "particleLayers": "ambient behind tiles, celebratory FX above",
     "prefersReducedMotion": "honor"
   },
   "screens": [
@@ -248,6 +254,27 @@
         "deep": 3
       },
       "thawPerTrio": 1
+    },
+    "coinBag": {
+      "form": "#e8975c",
+      "light": "#ffd9a8",
+      "shade": "#a05a28",
+      "coinsMin": 15,
+      "coinsMax": 25,
+      "perLevel": 2,
+      "fromLevel": 3
+    }
+  },
+  "boosters": {
+    "undo": { "cost": 100, "tint": "#7ee0c3" },
+    "shuffle": { "cost": 150, "tint": "#b18cff" },
+    "hint": { "cost": 75, "tint": "#ffd166" },
+    "wand": { "cost": 200, "tint": "#ff9fb2" },
+    "hammer": {
+      "cost": 250,
+      "tint": "#ff8a66",
+      "armedGlow": "rgba(255,138,102,0.55)",
+      "smashesFrozen": true
     }
   }
 }
